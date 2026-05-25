@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mario Buendía | Fullstack Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">MB</a>
+      <div class="d-flex align-items-center gap-3 ms-auto">
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+          <span class="text-muted">|</span>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio"     data-es="Inicio"     data-en="Home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portafolio" data-es="Portafolio" data-en="Portfolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi"   data-es="Sobre mí"   data-en="About">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cv"         data-es="CV"         data-en="CV">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto"   data-es="Contacto"   data-en="Contact">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Inicio -->
+  <section id="inicio" class="hero d-flex align-items-center">
+    <div class="container text-center text-white">
+      <h1 class="display-4 fw-bold">
+        <span data-es="Hola, soy" data-en="Hi, I'm">Hola, soy</span>
+        <span class="highlight"> Mario Buendía</span>
+      </h1>
+      <p class="lead mt-3" data-es="Desarrollador Fullstack & Analista de Datos | Java · Spring Boot · PostgreSQL · Python · JavaScript" data-en="Fullstack Developer & Data Analyst | Java · Spring Boot · PostgreSQL · Python · JavaScript">
+        Desarrollador Fullstack & Analista de Datos | Java · Spring Boot · PostgreSQL · Python · JavaScript
+      </p>
+      <p class="mt-2 text-light opacity-75">
+        <i class="bi bi-geo-alt me-1"></i>Bogotá, Colombia
+        <span class="mx-2">·</span>
+        <i class="bi bi-translate me-1"></i>
+        <span data-es="Inglés B2 · Español Nativo" data-en="English B2 · Spanish Native">Inglés B2 · Español Nativo</span>
+      </p>
+      <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#portafolio" class="btn btn-primary btn-lg" data-es="Ver proyectos" data-en="See projects">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-outline-light btn-lg" data-es="Contacto" data-en="Contact">Contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portafolio -->
+  <section id="portafolio" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5" data-es="Portafolio" data-en="Portfolio">Portafolio</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <h5 class="card-title">To-Do App</h5>
+                <span class="badge bg-primary">Fullstack</span>
+              </div>
+              <p class="card-text" data-es="Aplicación de gestión de tareas con CRUD completo, filtrado por estado y fecha límite. Arquitectura en capas con Spring Boot y PostgreSQL." data-en="Task management application with full CRUD, status filtering and due dates. Layered architecture with Spring Boot and PostgreSQL.">
+                Aplicación de gestión de tareas con CRUD completo, filtrado por estado y fecha límite. Arquitectura en capas con Spring Boot y PostgreSQL.
+              </p>
+              <div class="tech-tags mt-3">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">REST API</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a href="https://github.com/buendiamariodev/todo-app" target="_blank" class="btn btn-sm btn-outline-primary me-2">
+                <i class="bi bi-github"></i> <span data-es="Código" data-en="Code">Código</span>
+              </a>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="bi bi-box-arrow-up-right"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card project-card h-100 coming-soon">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <div class="text-center text-muted">
+                <i class="bi bi-code-slash fs-1"></i>
+                <p class="mt-3" data-es="Próximo proyecto" data-en="Coming soon">Próximo proyecto</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5" data-es="Sobre mí" data-en="About me">Sobre mí</h2>
+      <div class="row align-items-center">
+
+        <div class="col-md-2 text-center mb-4 mb-md-0">
+          <img src="assets/perfil.jpg" alt="Mario Buendía" class="profile-photo"/>
+        </div>
+
+        <div class="col-md-4">
+          <h4 data-es="Desarrollador Fullstack & Analista de Datos" data-en="Fullstack Developer & Data Analyst">
+            Desarrollador Fullstack & Analista de Datos
+          </h4>
+          <p class="mt-3 text-muted" data-es="Profesional con 5 años de experiencia en análisis de datos y 1 año en desarrollo backend. Me especializo en construir soluciones robustas con Java Spring Boot, automatización de reportes con Python y visualización de datos con Power BI y Jupyter Notebooks." data-en="Professional with 5 years of experience in data analysis and 1 year in backend development. I specialize in building robust solutions with Java Spring Boot, report automation with Python, and data visualization with Power BI and Jupyter Notebooks.">
+            Profesional con 5 años de experiencia en análisis de datos y 1 año en desarrollo backend. Me especializo en construir soluciones robustas con Java Spring Boot, automatización de reportes con Python y visualización de datos con Power BI y Jupyter Notebooks.
+          </p>
+          <p class="text-muted" data-es="Bilingüe (Español nativo, Inglés B2), con sólidas habilidades analíticas y de resolución de problemas. Actualmente finalizando mi formación como Tecnólogo en Análisis y Desarrollo de Software en SENA." data-en="Bilingual (Spanish native, English B2), with strong analytical and problem-solving skills. Currently completing my Software Analysis and Development degree at SENA.">
+            Bilingüe (Español nativo, Inglés B2), con sólidas habilidades analíticas y de resolución de problemas. Actualmente finalizando mi formación como Tecnólogo en Análisis y Desarrollo de Software en SENA.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <div class="skills-grid mt-4 mt-md-0">
+            <div class="skill-item"><i class="bi bi-cup-hot"></i> Java</div>
+            <div class="skill-item"><i class="bi bi-gear"></i> Spring Boot</div>
+            <div class="skill-item"><i class="bi bi-database"></i> PostgreSQL</div>
+            <div class="skill-item"><i class="bi bi-filetype-js"></i> JavaScript</div>
+            <div class="skill-item"><i class="bi bi-graph-up"></i> Python</div>
+            <div class="skill-item"><i class="bi bi-bar-chart"></i> Power BI</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">CV</h2>
+      <div class="row">
+
+        <div class="col-md-6">
+          <h5 class="mb-4"><i class="bi bi-briefcase me-2"></i><span data-es="Experiencia" data-en="Experience">Experiencia</span></h5>
+
+          <div class="cv-item">
+            <h6>Data Analyst – CorpSanRoque</h6>
+            <p class="text-muted mb-1 small">Jan 2024 – <span data-es="Presente" data-en="Present">Presente</span> · Remote</p>
+            <p class="text-muted small" data-es="Diseño de dashboards KPI, automatización de reportes con Excel VBA y Python, análisis y limpieza de datos." data-en="KPI dashboard design, report automation with Excel VBA and Python, data analysis and cleaning.">
+              Diseño de dashboards KPI, automatización de reportes con Excel VBA y Python, análisis y limpieza de datos.
+            </p>
+          </div>
+
+          <div class="cv-item">
+            <h6>College Trainee – Globant</h6>
+            <p class="text-muted mb-1 small">Apr 2023 – Jan 2025 · Remote</p>
+            <p class="text-muted small" data-es="Análisis de datos con Python (Pandas, NumPy), dashboards en Power BI y Tableau, soporte a pipelines de datos backend." data-en="Data analysis with Python (Pandas, NumPy), dashboards in Power BI and Tableau, backend data pipeline support.">
+              Análisis de datos con Python (Pandas, NumPy), dashboards en Power BI y Tableau, soporte a pipelines de datos backend.
+            </p>
+          </div>
+
+          <div class="cv-item">
+            <h6>Junior Data Analyst – CorpSanRoque</h6>
+            <p class="text-muted mb-1 small">May 2021 – Dec 2023 · Remote</p>
+            <p class="text-muted small" data-es="Construcción de reportes automatizados, validación de datos, flujos ETL y visualización de KPIs en Power BI." data-en="Automated reports, data validation, ETL workflows and KPI visualization in Power BI.">
+              Construcción de reportes automatizados, validación de datos, flujos ETL y visualización de KPIs en Power BI.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h5 class="mb-4"><i class="bi bi-tools me-2"></i><span data-es="Habilidades técnicas" data-en="Technical skills">Habilidades técnicas</span></h5>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Java / Spring Boot</span><span>70%</span></div>
+            <div class="progress mt-1"><div class="progress-bar" style="width: 70%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Python / Pandas / NumPy</span><span>75%</span></div>
+            <div class="progress mt-1"><div class="progress-bar" style="width: 75%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Power BI / Tableau</span><span>80%</span></div>
+            <div class="progress mt-1"><div class="progress-bar" style="width: 80%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>SQL / PostgreSQL</span><span>70%</span></div>
+            <div class="progress mt-1"><div class="progress-bar" style="width: 70%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>HTML / CSS / JavaScript</span><span>60%</span></div>
+            <div class="progress mt-1"><div class="progress-bar" style="width: 60%"></div></div>
+          </div>
+
+          <h5 class="mt-4 mb-3"><i class="bi bi-mortarboard me-2"></i><span data-es="Educación" data-en="Education">Educación</span></h5>
+          <div class="cv-item">
+            <h6 data-es="Tecnólogo en Análisis y Desarrollo de Software" data-en="Software Analysis and Development Technologist">Tecnólogo en Análisis y Desarrollo de Software</h6>
+            <p class="text-muted mb-0 small">SENA · 2025</p>
+          </div>
+          <div class="cv-item">
+            <h6 data-es="Técnico en Contabilidad" data-en="Accounting Technician">Técnico en Contabilidad</h6>
+            <p class="text-muted mb-0 small">Centro Inca · 2012</p>
+          </div>
+
+          <h5 class="mt-4 mb-3"><i class="bi bi-patch-check me-2"></i>Certifications</h5>
+          <ul class="text-muted small">
+            <li>Data Analysis with Pandas and Python – Udemy</li>
+            <li>Control Excel with Python & OpenPyXL – Udemy</li>
+            <li>Java Design Patterns – Udemy</li>
+            <li>Principles of SOLID – Udemy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="reflection-box">
+            <h5><i class="bi bi-journal-text me-2"></i><span data-es="Reflexión de mi camino como desarrollador" data-en="Reflection on my journey as a developer">Reflexión de mi camino como desarrollador</span></h5>
+            <p class="mt-3 text-muted" data-es="Mi camino en tecnología comenzó desde el análisis de datos, construyendo dashboards y automatizando reportes para organizaciones reales. Con el tiempo, ese trabajo me llevó naturalmente hacia el desarrollo de software, donde encontré una nueva forma de resolver problemas a escala mayor. Hoy combino ambas disciplinas: construyo backends sólidos con Java y Spring Boot, y aplico mi experiencia en datos para generar valor real desde el código." data-en="My journey in technology started from data analysis, building dashboards and automating reports for real organizations. Over time, that work naturally led me to software development, where I found a new way to solve problems at a larger scale. Today I combine both disciplines: I build solid backends with Java and Spring Boot, and apply my data experience to generate real value from code.">
+              Mi camino en tecnología comenzó desde el análisis de datos, construyendo dashboards y automatizando reportes para organizaciones reales. Con el tiempo, ese trabajo me llevó naturalmente hacia el desarrollo de software, donde encontré una nueva forma de resolver problemas a escala mayor. Hoy combino ambas disciplinas: construyo backends sólidos con Java y Spring Boot, y aplico mi experiencia en datos para generar valor real desde el código.
+            </p>
+            <p class="text-muted" data-es="A corto plazo, mi meta es completar mi portafolio con proyectos fullstack y de análisis de datos desplegados y accesibles públicamente. A largo plazo, quiero consolidarme como un desarrollador fullstack con especialización en soluciones orientadas a datos." data-en="In the short term, my goal is to complete my portfolio with fullstack and data analysis projects deployed and publicly accessible. In the long term, I want to establish myself as a fullstack developer specializing in data-driven solutions.">
+              A corto plazo, mi meta es completar mi portafolio con proyectos fullstack y de análisis de datos desplegados y accesibles públicamente. A largo plazo, quiero consolidarme como un desarrollador fullstack con especialización en soluciones orientadas a datos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5" data-es="Contacto" data-en="Contact">Contacto</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted mb-4" data-es="¿Tienes un proyecto o una oportunidad? Me encantaría escucharte." data-en="Have a project or an opportunity? I'd love to hear from you.">
+            ¿Tienes un proyecto o una oportunidad? Me encantaría escucharte.
+          </p>
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <a href="mailto:buendiamariodev@gmail.com" class="contact-link">
+              <i class="bi bi-envelope-fill"></i> buendiamariodev@gmail.com
+            </a>
+            <a href="https://github.com/buendiamariodev" target="_blank" class="contact-link">
+              <i class="bi bi-github"></i> buendiamariodev
+            </a>
+            <a href="https://www.linkedin.com/in/mariobuendiaq/" target="_blank" class="contact-link">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-3 text-center">
+    <small>© 2026 Mario Buendía · Bogotá, Colombia · <a href="https://github.com/buendiamariodev" target="_blank" class="text-muted">GitHub</a></small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
